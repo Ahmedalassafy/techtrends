@@ -1,9 +1,9 @@
 apiVersion: v1     
-name: techtrends	 		             // name for our chart in this case techtrends
-description: techtrends project 	 // description to that helm chart 
-keywords:  				                 // keywords for quick identification of what the chart does 
+name: techtrends	 		             
+description: techtrends project 	  
+keywords:  				                  
 - techtrends
-version: 1.0.0  			             // we have the version 
-maintainers: 				               // here names of who did it 
+version: 1.0.0  			             
+maintainers: 				               
 - name: ahmedalassafy
   email: ahmedalassafy@xyz.com 
