@@ -1,0 +1,30 @@
+namespace:
+  name: sandbox      
+ 
+image:
+  repository: ahmedalassafy/techtrends   
+  tag: latest              
+  imagePullPolicy: ifNotPresent   
+
+replicaCount: 1    
+
+service: 
+  clusterIp: ClusterIP  
+  port: 4111           
+  targetport: 3111     
+  protocol: TCP        
+
+
+resources:
+  requests: 
+    memory: "64Mi"
+    cpu: "250m"
+  limits:
+    memeory: "128Mi"
+    cpu: "500m"
+
+containerPort: 3111
+
+livenessProbepath: /healthz
+
+readinessProbepath: /healthz

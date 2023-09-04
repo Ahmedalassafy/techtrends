@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: techtrends              # Name of the Service
+  namespace: sandbox
+spec:
+  selector:
+    app: techtrends            # Label selector to match pods
+  externalIPs:
+    - 10.42.0.11
+  ports:
+    - protocol: TCP
+      port: 4111                   # Port that the Service should listen on
+      targetPort: 3111             # Port that pods are listening on
+  type: ClusterIP 
