@@ -14,7 +14,6 @@ service:
   targetport: 3111     
   protocol: TCP        
 
-
 resources:
   requests: 
     memory: "64Mi"
@@ -22,9 +21,7 @@ resources:
   limits:
     memeory: "128Mi"
     cpu: "500m"
-
+    
 containerPort: 3111
-
 livenessProbepath: /healthz
-
 readinessProbepath: /healthz
