@@ -22,7 +22,7 @@ spec:
       - image: {{ .Values.image.repository }} : {{ .Values.image.tag }}
         name: techtrends
         ports:
-        - containerPort: {{ .Vlaues.containerPort }}
+        - containerPort: {{ .Values.containerPort }}
         livenessProbe:
           httpGet:
             path: {{ .Vlaues.livenessProbepath }}
