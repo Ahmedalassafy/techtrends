@@ -23,6 +23,16 @@ spec:
         name: techtrends
         ports:
         - containerPort: {{ .Values.containerPort }}
+        livenessProbe:
+          httpGet:
+            path: {{ .Values.livenessProbepath }}
+            port: 3111
+          initialDelaySeconds: 60
+        readinessProbe:
+          httpGet:
+            path: {{ .Values.readinessProbepath }}
+            port: 3111
+          initialDelaySeconds: 60
         resources: 
           requests:
             memory: {{ .Values.resources.requests.memory }}
