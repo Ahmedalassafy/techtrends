@@ -25,12 +25,12 @@ spec:
         - containerPort: {{ .Values.containerPort }}
         livenessProbe:
           httpGet:
-            path: {{ .Vlaues.livenessProbepath }}
+            path: {{ .Values.livenessProbepath }}
             port: 3111
           initialDelaySeconds: 10
         readinessProbe:
           httpGet:
-            path: {{ .Vlaues.readinessProbepath }}
+            path: {{ .Values.readinessProbepath }}
             port: 3111
           initialDelaySeconds: 10
         resources: 
