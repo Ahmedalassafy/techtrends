@@ -27,12 +27,12 @@ spec:
           httpGet:
             path: {{ .Values.livenessProbepath }}
             port: 3111
-          initialDelaySeconds: 10
+          initialDelaySeconds: 60
         readinessProbe:
           httpGet:
             path: {{ .Values.readinessProbepath }}
             port: 3111
-          initialDelaySeconds: 10
+          initialDelaySeconds: 60
         resources: 
           requests:
             memory: {{ .Values.resources.requests.memory }}
